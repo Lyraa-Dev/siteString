@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String em JAVASCRIPT</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="header">Strings com JavaScript</div>
+    <div class="container">
+    <div id="botaoContainer">
+        <h1>Tópicos</h1>
+        <button onclick="mostrarTopico('StringComJavaScript')">String com JavaScript</button>
+        <button onclick="mostrarTopico('OQueEUmaString')">O que é uma String</button>
+        <button onclick="mostrarTopico('MetodosDeManipulacao')">Métodos de Manipulação de String</button>
+        <button onclick="mostrarTopico('ConcatenacaoDeString')">Concatenação de String</button>
+        <button onclick="mostrarTopico('Propriedades')">Propriedades</button>
+        <button onclick="mostrarTopico('Substring')">Substring</button>
+        <button onclick="mostrarTopico('LocalizandoESubstituindo')">Localizando e Substituindo Caracteres</button>
+        <button onclick="mostrarTopico('ComparandoEVerificando')">Comparando e Verificando Strings</button>
+        <button onclick="mostrarTopico('ConvertendoParaOutrosTipos')">Convertendo Strings para Outros Tipos</button>
+        <button onclick="mostrarTopico('MetodosParaAString')">Métodos para a String</button>
+        <button onclick="mostrarTopico('ExemplosDeUso')">Exemplos de Uso</button>
+        <!-- Adicione mais botões conforme necessário -->
+    </div>
+    
+    
+    <div id="conteudo">
+        <!-- Área onde o conteúdo será exibido -->
+        <h1>Strings em JavaScript</h1>
+        <p>Em JavaScript, uma string é uma sequência de caracteres, sendo delimitada por aspas simples ('') ou duplas ("").</p>
+        <!-- Adicione mais conteúdo conforme necessário -->
+    </div>
+</div>
+
+    
+</div>
+    <script>
+        function mostrarTopico(topico) {
+            var conteudoDiv = document.getElementById("conteudo");
+            var conteudoMarkdown = "";
+
+            switch (topico) {
+                case "StringComJavaScript":
+                    conteudoMarkdown = `
+                        <h1>String com JavaScript</h1>
+                        <p>Em JavaScript, uma string é uma sequência de caracteres, sendo delimitada por aspas simples ('') ou duplas ("").</p>
+                    `;
+                    break;
+                case "OQueEUmaString":
+                    conteudoMarkdown = `
+                        <h1>O que é uma String</h1>
+                        <p>Uma string é uma coleção de caracteres que representa texto. Em JavaScript, as strings são imutáveis, o que significa que não podem ser alteradas diretamente.</p>
+                    `;
+                    break;
+                case "MetodosDeManipulacao":
+                    conteudoMarkdown = `
+                        <h1>Métodos de Manipulação de String</h1>
+                        <p>Existem vários métodos para manipulação de strings em JavaScript, incluindo:</p>
+                        <ul>
+                            <li><code>length</code>: Retorna o comprimento da string.</li>
+                            <li><code>toUpperCase()</code> e <code>toLowerCase()</code>: Convertem a string para maiúsculas ou minúsculas.</li>
+                            <li><code>charAt(index)</code>: Retorna o caractere na posição especificada.</li>
+                            <li><code>slice(start, end)</code>: Extrai uma parte da string.</li>
+                        </ul>
+                    `;
+                    break;
+                case "ConcatenacaoDeString":
+                    conteudoMarkdown = `
+                        <h1>Concatenação de String</h1>
+                        <p>A concatenação de strings em JavaScript pode ser feita usando o operador <code>+</code> ou o método <code>concat()</code>.</p>
+                    `;
+                    break;
+                case "Propriedades":
+                    conteudoMarkdown = `
+                        <h1>Propriedades</h1>
+                        <p><code>length</code>: Retorna o comprimento da string.</p>
+                    `;
+                    break;
+                case "Substring":
+                    conteudoMarkdown = `
+                        <h1>Substring</h1>
+                        <p>O método <code>substring(start, end)</code> extrai uma parte da string, começando do índice 'start' até 'end' (não incluído).</p>
+                    `;
+                    break;
+                case "LocalizandoESubstituindo":
+                    conteudoMarkdown = `
+                        <h1>Localizando e Substituindo Caracteres em uma String</h1>
+                        <p><code>indexOf(substring)</code>: Retorna o índice da primeira ocorrência da substring.</p>
+                        <p><code>replace(old, new)</code>: Substitui a primeira ocorrência de 'old' por 'new'.</p>
+                    `;
+                    break;
+                case "ComparandoEVerificando":
+                    conteudoMarkdown = `
+                        <h1>Comparando e Verificando Strings</h1>
+                        <p><code>===</code> (igualdade estrita): Compara strings levando em consideração o valor e o tipo.</p>
+                        <p><code>==</code> (igualdade solta): Compara strings, convertendo tipos se necessário.</p>
+                        <p><code>startsWith(prefix)</code>, <code>endsWith(suffix)</code>: Verifica se a string começa ou termina com a substring fornecida.</p>
+                    `;
+                    break;
+                case "ConvertendoParaOutrosTipos":
+                    conteudoMarkdown = `
+                        <h1>Convertendo Strings para Outros Tipos de Dados</h1>
+                        <p><code>parseInt(string)</code>: Converte uma string para um número inteiro.</p>
+                        <p><code>parseFloat(string)</code>: Converte uma string para um número de ponto flutuante.</p>
+                    `;
+                    break;
+                case "MetodosParaAString":
+                    conteudoMarkdown = `
+                        <h1>Métodos para a String</h1>
+                        <p>Alguns métodos importantes:</p>
+                        <ul>
+                            <li><code>split(separator)</code>: Divide a string em um array de substrings.</li>
+                            <li><code>trim()</code>: Remove espaços em branco do início e do final da string.</li>
+                        </ul>
+                    `;
+                    break;
+                case "ExemplosDeUso":
+                    conteudoMarkdown = `
+                        <h1>Exemplos de Uso</h1>
+                        <pre><code>let exemploString = "Olá, Mundo!";
+console.log(exemploString.length);  // Saída: 11
+console.log(exemploString.toUpperCase());  // Saída: OLÁ, MUNDO!
+console.log(exemploString.indexOf("Mundo"));  // Saída: 5
+console.log(exemploString.replace("Olá", "Oi"));  // Saída: Oi, Mundo!
+// ... outros exemplos de métodos e operações ...
+                        </code></pre>
+                    `;
+                    break;
+                // Adicione mais casos conforme necessário
+            }
+
+            conteudoDiv.innerHTML = conteudoMarkdown;
+        }
+    </script>
+
+</body>
+</html>
